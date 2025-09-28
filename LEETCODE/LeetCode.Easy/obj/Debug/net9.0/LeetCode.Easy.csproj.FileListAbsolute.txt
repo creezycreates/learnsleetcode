@@ -1,0 +1,14 @@
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\bin\Debug\net9.0\LeetCode.Easy.exe
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\bin\Debug\net9.0\LeetCode.Easy.deps.json
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\bin\Debug\net9.0\LeetCode.Easy.runtimeconfig.json
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\bin\Debug\net9.0\LeetCode.Easy.dll
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\bin\Debug\net9.0\LeetCode.Easy.pdb
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\obj\Debug\net9.0\LeetCode.Easy.GeneratedMSBuildEditorConfig.editorconfig
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\obj\Debug\net9.0\LeetCode.Easy.AssemblyInfoInputs.cache
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\obj\Debug\net9.0\LeetCode.Easy.AssemblyInfo.cs
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\obj\Debug\net9.0\LeetCode.Easy.csproj.CoreCompileInputs.cache
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\obj\Debug\net9.0\LeetCode.Easy.dll
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\obj\Debug\net9.0\refint\LeetCode.Easy.dll
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\obj\Debug\net9.0\LeetCode.Easy.pdb
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\obj\Debug\net9.0\LeetCode.Easy.genruntimeconfig.cache
+C:\WEBLYSOFT\TRAINING\learnsleetcode\LEETCODE\LeetCode.Easy\obj\Debug\net9.0\ref\LeetCode.Easy.dll
