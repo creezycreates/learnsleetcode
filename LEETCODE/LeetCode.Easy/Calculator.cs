@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace LeetCode.Easy
 {
-    public class Calculator
+    public static class Calculator
     {
         //Given a non-negative integer x, return the square root of x rounded down 
         //to the nearest integer.The returned integer should be non-negative as well.
@@ -17,7 +10,7 @@ namespace LeetCode.Easy
         //For example, do not use pow(x, 0.5) in c++ or x ** 0.5 in python.
 
         //Example 1:
-
+        
         //Input: x = 4
         //Output: 2
         //Explanation: The square root of 4 is 2, so we return 2.
@@ -43,7 +36,6 @@ namespace LeetCode.Easy
             if (x > 0)
             {
                 quotient = x;
-
                 while (true)
                 {
                     quotient = quotient / 2;
@@ -98,11 +90,7 @@ namespace LeetCode.Easy
                     }
                 }
             }
-
             return y;
         }
-
     }
-
-
 }
