@@ -15,9 +15,38 @@ public static class Apps
             case AppEnum.Pascaltrianglegenerator:
                 RunPascalTriangleGenerator();
                 break;
+            case AppEnum.SingleNumberDetector:
+                RunSingleNumberDector();
+                break;
         }
     }
 
+
+
+    private static void RunSingleNumberDector()
+    {
+        Console.Write(">> Please enter the numbers separated by comma: ");
+        var line = Console.ReadLine();
+        string[] tokens = line.Split(new char[] { ',' });
+        int[] nums = new int[tokens.Length];
+        for (int i = 0; i < nums.Length; i++)
+        {
+            nums[i] = int.Parse(tokens[i]);
+        }
+        
+        SingleNumberDetector detector = new SingleNumberDetector();
+        int? uniqueNumber = detector.SingleNumber(nums);
+
+        if (uniqueNumber == null)
+        {
+            Console.WriteLine("No unique number found");
+        }
+        else
+        {
+            Console.WriteLine("The unique number is: " + uniqueNumber);
+        }
+    }
+    
     private static void RunPascalTriangleGenerator()
     {
         int rowsCount = 0;
