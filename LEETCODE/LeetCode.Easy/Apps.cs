@@ -18,10 +18,61 @@ public static class Apps
             case AppEnum.SingleNumberDetector:
                 RunSingleNumberDector();
                 break;
+            case AppEnum.LinkedListElementRemover:
+                RunLinkedListRemover();
+                break;
         }
     }
 
 
+    
+    private static void RunLinkedListRemover()
+    {
+        string input = "";
+        LinkedList list = new LinkedList();
+        
+        while (input != "exit")
+        {
+            Console.Write(">> Please enter the numbers separated by comma or exit to stop the program: ");
+            var line = Console.ReadLine();
+
+            if (line.ToLower().Trim() == "exit")
+            {
+                break;
+            }
+            else
+            {
+                string[] tokens = line.Split(new char[] { ',' });
+                int valueToRemove = -1;
+                int[] nums = Array.ConvertAll(tokens, t => int.Parse(t.Trim()));
+                
+                // Build linked list from nums
+                ListNode head = null;
+                ListNode current = null;
+                
+                foreach (int num in nums)
+                {
+                    if (head == null)
+                    {
+                        head = new ListNode(num);
+                        current = head;
+                    }
+                    else
+                    {
+                        current.next = new ListNode(num);
+                        current = current.next;
+                    }
+                }
+                
+                Console.Write(">> Please enter the value you want to remove: ");
+                Int32.TryParse(Console.ReadLine(), out valueToRemove);
+                head = list.RemoveElements(head, valueToRemove);
+                Console.WriteLine(">> The linked list after removing the value is: ");
+                list.Print(head);
+                Console.WriteLine("\n");
+            }
+        }
+    }
 
     private static void RunSingleNumberDector()
     {
