@@ -6,5 +6,6 @@ public enum AppEnum: int
     Pascaltrianglegenerator = 2,
     SingleNumberDetector = 3,
     LinkedListElementRemover = 4,
+    LinkedListDuplicatesRemover = 5,
     Undefined = 1000000
 }

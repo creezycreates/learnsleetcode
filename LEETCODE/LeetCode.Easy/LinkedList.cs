@@ -13,6 +13,32 @@ public class ListNode {
 
 public class LinkedList
 {
+    
+    public ListNode DeleteDuplicates(ListNode head)
+    {
+        ListNode? currentNode = head;
+        ListNode? tempNode = null;
+        
+        //Input: head = [1,1,1,2]
+
+        while (currentNode != null)
+        {
+            while (currentNode.next != null && currentNode.val == currentNode.next.val)
+            {
+                tempNode = currentNode.next;
+                currentNode.next = tempNode.next;
+                tempNode = null;
+            }
+            
+            currentNode = currentNode.next;
+        }
+
+
+        return head;
+
+    }
+    
+    
     public ListNode RemoveElements(ListNode head, int val)
     {
         ListNode? currentNode = head;

@@ -21,10 +21,39 @@ public static class Apps
             case AppEnum.LinkedListElementRemover:
                 RunLinkedListRemover();
                 break;
+            case AppEnum.LinkedListDuplicatesRemover:
+                RunLinkedListDuplicatesRemover();
+                break;
         }
     }
 
 
+    private static void RunLinkedListDuplicatesRemover()
+    {
+        string input = "";
+        LinkedList list = new LinkedList();
+
+        while (input != "exit")
+        {
+            Console.Write(">> Please enter the numbers (in ascending sorted order)" +
+                          " separated by comma or type exit to stop the program: ");
+            var line = Console.ReadLine();
+
+            if (line.ToLower().Trim() == "exit")
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine(">> Removing Duplicates...");
+                ListNode head = BuildIntegersList(line);
+                head = list.DeleteDuplicates(head);
+                Console.Write(">> The linked list after removing duplicates is: ");
+                list.Print(head);
+                Console.WriteLine("\n");
+            }
+        }
+    }
     
     private static void RunLinkedListRemover()
     {
@@ -42,27 +71,9 @@ public static class Apps
             }
             else
             {
-                string[] tokens = line.Split(new char[] { ',' });
-                int valueToRemove = -1;
-                int[] nums = Array.ConvertAll(tokens, t => int.Parse(t.Trim()));
-                
                 // Build linked list from nums
-                ListNode head = null;
-                ListNode current = null;
-                
-                foreach (int num in nums)
-                {
-                    if (head == null)
-                    {
-                        head = new ListNode(num);
-                        current = head;
-                    }
-                    else
-                    {
-                        current.next = new ListNode(num);
-                        current = current.next;
-                    }
-                }
+                int valueToRemove = -1;
+                ListNode head = BuildIntegersList(line);
                 
                 Console.Write(">> Please enter the value you want to remove: ");
                 Int32.TryParse(Console.ReadLine(), out valueToRemove);
@@ -72,6 +83,32 @@ public static class Apps
                 Console.WriteLine("\n");
             }
         }
+    }
+
+    private static ListNode BuildIntegersList(string line)
+    {
+        ListNode head = null;
+        ListNode current = null;
+        
+        string[] tokens = line.Split(new char[] { ',' });
+        
+        int[] nums = Array.ConvertAll(tokens, t => int.Parse(t.Trim()));
+                
+        foreach (int num in nums)
+        {
+            if (head == null)
+            {
+                head = new ListNode(num);
+                current = head;
+            }
+            else
+            {
+                current.next = new ListNode(num);
+                current = current.next;
+            }
+        }
+
+        return head;
     }
 
     private static void RunSingleNumberDector()
