@@ -24,10 +24,52 @@ public static class Apps
             case AppEnum.LinkedListDuplicatesRemover:
                 RunLinkedListDuplicatesRemover();
                 break;
+            case AppEnum.ExcelSheetEngine:
+                RunExcelSheetEngine();
+                break;
         }
     }
 
 
+
+    private static void RunExcelSheetEngine()
+    {
+        string? input = "";
+        int columnNumber = -1;
+        bool validInput = false;
+        string columnTitle = "";
+        ExcelSheetEngine sheetEngine = new ExcelSheetEngine();
+        
+        while (input != "exit")
+        {
+            columnNumber = -1; 
+            Console.Write(">> Please enter the column number: ");
+            input = Console.ReadLine();
+            if (input != null && input.ToLower().Trim() == "exit")
+            {
+                break;
+            }
+            else
+            {
+                validInput = Int32.TryParse(input, out columnNumber);
+                if (!validInput)
+                {
+                    Console.WriteLine(">>ERROR: Please enter a valid column number\n");
+                }
+                else if(columnNumber <= 0)
+                {
+                    Console.WriteLine(">>ERROR: Please enter a column number greater than 0\n");
+                }
+                else
+                {
+                   columnTitle = sheetEngine.ConvertToTitle(columnNumber);
+                   Console.WriteLine(">> The column title Mapping to COLUMN NUMBER " + 
+                                     columnNumber + " is: " + columnTitle + "\n");
+                }
+            }
+        }
+    }
+    
     private static void RunLinkedListDuplicatesRemover()
     {
         string input = "";

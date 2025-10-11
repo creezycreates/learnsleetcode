@@ -7,5 +7,6 @@ public enum AppEnum: int
     SingleNumberDetector = 3,
     LinkedListElementRemover = 4,
     LinkedListDuplicatesRemover = 5,
+    ExcelSheetEngine = 6,
     Undefined = 1000000
 }
