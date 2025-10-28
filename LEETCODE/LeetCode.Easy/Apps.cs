@@ -27,10 +27,49 @@ public static class Apps
             case AppEnum.ExcelSheetEngine:
                 RunExcelSheetEngine();
                 break;
+            case AppEnum.LinkedListPalindromeDetector:
+                RunLinkedListPalindromeDetector();
+                break;
         }
     }
 
 
+
+    private static void RunLinkedListPalindromeDetector()
+    {
+        string input = "";
+        LinkedList list = new LinkedList();
+
+        while (input != "exit")
+        {
+            Console.Write(">> Please enter the numbers " +
+                          " separated by comma or type exit to stop the program: ");
+            var line = Console.ReadLine();
+
+            if (line.ToLower().Trim() == "exit")
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine(">> Checking if the linked list is a palindrome...");
+                ListNode head = BuildIntegersList(line);
+                bool isPalindrome = list.IsPalindrome(head);
+                Console.WriteLine();
+
+                if (isPalindrome)
+                {
+                    Console.WriteLine(">> The linked list is a palindrome\n");
+                }
+                else
+                {
+                    Console.WriteLine(">> The linked list is not a palindrome\n");   
+                }
+                
+               
+            }
+        }
+    }
 
     private static void RunExcelSheetEngine()
     {

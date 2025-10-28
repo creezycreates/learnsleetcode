@@ -13,6 +13,87 @@ public class ListNode {
 
 public class LinkedList
 {
+    public bool IsPalindrome(ListNode head)
+    {
+        bool isPalindrome = false;
+        ListNode? nodeinOriginalList = head;
+        ListNode? nodeinReversedList = null;
+        ListNode? cloneHeadNode = Clone(head);
+        ListNode? reversedHeadNode = ReverseList(cloneHeadNode);
+        
+        
+        nodeinOriginalList = head;
+        nodeinReversedList = reversedHeadNode;
+
+        while (nodeinOriginalList != null && nodeinReversedList != null)
+        {
+            if(nodeinOriginalList.val == nodeinReversedList.val)
+            {
+                isPalindrome = true;
+            }
+            else
+            {
+                isPalindrome = false;
+                break;
+            }
+            
+            nodeinOriginalList = nodeinOriginalList.next;
+            nodeinReversedList = nodeinReversedList.next;
+        }
+        
+        return isPalindrome;
+    }
+
+    public ListNode ReverseList(ListNode head)
+    {
+        ListNode? nextNode = null;
+        ListNode? previousNode = null;
+        ListNode? currentNode = head;
+
+        while (currentNode != null)
+        {
+            nextNode = currentNode.next;
+            currentNode.next = previousNode;
+            previousNode = currentNode;
+            currentNode = nextNode;
+            
+            if(currentNode == null)
+            {
+                head = previousNode;
+            }
+        }
+        
+        return head;
+    }
+    
+    public ListNode Clone(ListNode head)
+    {
+        ListNode? headCloneNode = null;
+        ListNode? currentNode = head;
+        ListNode? tempNode = null;
+        ListNode? nextNode = null;
+        
+
+        while (currentNode != null)
+        {
+            if(currentNode == head)
+            {
+                headCloneNode = new ListNode(currentNode.val);
+                tempNode = headCloneNode;
+            }
+            else
+            {
+                nextNode = new ListNode(currentNode.val);
+                tempNode.next = nextNode;
+                tempNode = nextNode;
+            }
+            
+            currentNode = currentNode.next;
+        }
+        
+        return headCloneNode;
+    }
+    
     
     public ListNode DeleteDuplicates(ListNode head)
     {
@@ -37,6 +118,7 @@ public class LinkedList
         return head;
 
     }
+    
     
     
     public ListNode RemoveElements(ListNode head, int val)

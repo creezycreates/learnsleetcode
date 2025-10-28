@@ -2,4 +2,4 @@
 using LeetCode.Easy;
 using LeetCode.Easy.Enums;
 
-Apps.Run(AppEnum.ExcelSheetEngine);
+Apps.Run(AppEnum.LinkedListPalindromeDetector);
