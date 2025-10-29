@@ -30,6 +30,8 @@ public static class Apps
             case AppEnum.LinkedListPalindromeDetector:
                 RunLinkedListPalindromeDetector();
                 break;
+            case AppEnum.QueueWithStackBuilder:
+                break;
         }
     }
 
