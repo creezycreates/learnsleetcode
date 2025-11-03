@@ -10,5 +10,6 @@ public enum AppEnum: int
     ExcelSheetEngine = 6,
     LinkedListPalindromeDetector = 7,
     QueueWithStackBuilder = 8,
+    DifferenceFinder = 9,
     Undefined = 1000000
 }

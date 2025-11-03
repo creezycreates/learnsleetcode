@@ -32,11 +32,48 @@ public static class Apps
                 break;
             case AppEnum.QueueWithStackBuilder:
                 break;
+            case AppEnum.DifferenceFinder:
+                RunDifferenceFinder();
+                break;
         }
     }
 
 
 
+
+    private static void RunDifferenceFinder()
+    {
+        string input = "";
+        DifferenceFinder finder = new DifferenceFinder();
+        while (input != "exit")
+        {
+            string s = "";
+            string t = "";
+            char extraChar = ' ';
+            Console.Write("\n>> Please enter the first string (s): ");
+            input = Console.ReadLine();
+            if (input != null && input.ToLower().Trim() == "exit")
+            {
+                break;
+            }
+            else
+            {
+                s = input;
+                Console.Write("\n>> Please enter the second string (t): ");
+                input = Console.ReadLine();
+                if (input != null && input.ToLower().Trim() == "exit")
+                {
+                    break;
+                }
+
+                t = input;
+                extraChar = finder.FindTheDifference(s, t);
+                Console.WriteLine("\n>> The extra character is: " + extraChar);
+                Console.WriteLine("\n");
+            }
+        }
+    }
+    
     private static void RunLinkedListPalindromeDetector()
     {
         string input = "";
