@@ -11,5 +11,6 @@ public enum AppEnum: int
     LinkedListPalindromeDetector = 7,
     QueueWithStackBuilder = 8,
     DifferenceFinder = 9,
+    TreesComparator = 10,
     Undefined = 1000000
 }

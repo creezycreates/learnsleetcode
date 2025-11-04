@@ -35,11 +35,19 @@ public static class Apps
             case AppEnum.DifferenceFinder:
                 RunDifferenceFinder();
                 break;
+            case AppEnum.TreesComparator:
+                RunTreesComparator();
+                break;
         }
     }
 
 
 
+
+    private static void RunTreesComparator()
+    {
+        
+    }
 
     private static void RunDifferenceFinder()
     {
