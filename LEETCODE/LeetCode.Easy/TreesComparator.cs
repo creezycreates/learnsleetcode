@@ -5,12 +5,9 @@ public class TreesComparator
     public bool IsSameTree(TreeNode p, TreeNode q)
     {
         bool areSimilar = false;
+        
         string pString = TraverseTree(p, "");
         string qString = TraverseTree(q, "");
-        
-        Console.WriteLine(">> PTRAIL = " + pString);
-        Console.WriteLine(">> QTRAIL = " + qString);
-        
         areSimilar = pString == qString;
         
         return areSimilar;
