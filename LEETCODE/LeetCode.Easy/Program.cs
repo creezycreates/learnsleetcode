@@ -2,4 +2,4 @@
 using LeetCode.Easy;
 using LeetCode.Easy.Enums;
 
-Apps.Run(AppEnum.DifferenceFinder);
+Apps.Run(AppEnum.ThreeSumSolver);

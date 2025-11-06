@@ -12,5 +12,6 @@ public enum AppEnum: int
     QueueWithStackBuilder = 8,
     DifferenceFinder = 9,
     TreesComparator = 10,
+    ThreeSumSolver = 11,
     Undefined = 1000000
 }
