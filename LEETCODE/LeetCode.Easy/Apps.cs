@@ -41,10 +41,21 @@ public static class Apps
             case AppEnum.ThreeSumSolver:
                 RunThreeSumSolver();
                 break;
+            case AppEnum.ColorsSorter:
+                RunColorsSorter();
+                break;
         }
     }
 
 
+    private static void RunColorsSorter()
+    {
+        //int[] colors = { 2,0,1 };
+        int[] colors = { 2, 0, 2, 1, 1, 0 };
+        ColorsSorter colorsSorter = new ColorsSorter();
+        colorsSorter.SortColors(colors);
+        colorsSorter.Print(colors);
+    }
 
     private static void RunThreeSumSolver()
     {
