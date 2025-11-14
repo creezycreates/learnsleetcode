@@ -14,5 +14,6 @@ public enum AppEnum: int
     TreesComparator = 10,
     ThreeSumSolver = 11,
     ColorsSorter = 12,
+    StringsAdder = 13,
     Undefined = 1000000
 }

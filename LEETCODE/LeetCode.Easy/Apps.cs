@@ -44,9 +44,46 @@ public static class Apps
             case AppEnum.ColorsSorter:
                 RunColorsSorter();
                 break;
+            case AppEnum.StringsAdder:
+                RunStringsAdder();
+                break;
         }
     }
 
+
+    private static void RunStringsAdder()
+    {
+        string input = "";
+        StringsAdder adder = new StringsAdder();
+        while (input != "exit")
+        {
+            string num1 = "";
+            string num2 = "";
+            string result = "";
+            Console.Write(">> Please enter the first number (num1): ");
+            input = Console.ReadLine();
+            if (input != null && input.ToLower().Trim() == "exit")
+            {
+                break;
+            }
+            else
+            {
+                num1 = input;
+                Console.Write(">> Please enter the second number (num2): ");
+                input = Console.ReadLine();
+                if (input != null && input.ToLower().Trim() == "exit")
+                {
+                    break;
+                }
+
+                num2 = input;
+                result = adder.AddStrings(num1, num2);
+                Console.WriteLine(">> " + num1 + " + " + num2 +  " = " + result);
+                Console.WriteLine("\n");
+            }
+        }
+    }
+    
 
     private static void RunColorsSorter()
     {

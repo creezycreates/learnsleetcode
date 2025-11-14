@@ -2,4 +2,4 @@
 using LeetCode.Easy;
 using LeetCode.Easy.Enums;
 
-Apps.Run(AppEnum.ColorsSorter);
+Apps.Run(AppEnum.StringsAdder);
