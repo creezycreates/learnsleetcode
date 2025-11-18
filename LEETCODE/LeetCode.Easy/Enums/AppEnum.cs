@@ -15,5 +15,6 @@ public enum AppEnum: int
     ThreeSumSolver = 11,
     ColorsSorter = 12,
     StringsAdder = 13,
+    MissingNumberFinder = 14,
     Undefined = 1000000
 }

@@ -47,9 +47,43 @@ public static class Apps
             case AppEnum.StringsAdder:
                 RunStringsAdder();
                 break;
+            case AppEnum.MissingNumberFinder:
+                RunMissingNumberFinder();
+                break;
         }
     }
 
+
+    private static void RunMissingNumberFinder()
+    {
+        string input = "";
+        int missingNumber = -1;
+        MissingNumberFinder finder = new MissingNumberFinder();
+        
+        while (input != "exit")
+        {
+            int[] nums = new int[1];
+           
+            Console.Write(">> Please enter elements in your numbers array separated by commas (i.e. 3,0,1): ");
+            input = Console.ReadLine();
+            if (input != null && input.ToLower().Trim() == "exit")
+            {
+                break;
+            }
+            else if(input != null)
+            {
+               string[] tokens = input.Split(',');
+               if (tokens.Length > 0)
+               {
+                   nums = Array.ConvertAll(tokens, int.Parse);
+                   missingNumber = finder.MissingNumber(nums);
+                   Console.WriteLine(">> The missing number in the array is: " + missingNumber);
+                   Console.WriteLine("\n");
+               }
+            }
+        }
+    }
+    
 
     private static void RunStringsAdder()
     {

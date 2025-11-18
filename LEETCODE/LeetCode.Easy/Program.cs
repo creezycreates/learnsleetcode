@@ -2,4 +2,4 @@
 using LeetCode.Easy;
 using LeetCode.Easy.Enums;
 
-Apps.Run(AppEnum.StringsAdder);
+Apps.Run(AppEnum.MissingNumberFinder);
