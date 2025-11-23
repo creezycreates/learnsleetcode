@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using LeetCode.Medium;
+
+string s = "applepenapple";
+string[] wordDict = {"apple","pen"};
+WordSegmenter segmenter = new WordSegmenter();
+Console.WriteLine(">> " + segmenter.WordBreak(s, wordDict));
